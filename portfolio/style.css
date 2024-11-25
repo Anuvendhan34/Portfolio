@@ -1,0 +1,494 @@
+ /* General Reset */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Navbar */
+nav {
+
+display: flex;
+justify-content: space-between;
+align-items: center; /* Corrected this line */
+background-color: #ffffff;
+color: #d9e9f2;
+
+padding: 0.6em 1em;
+position: fixed;
+width: 96%; /* Changed to 100% to fill the full width */
+top: 0;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 100;
+}
+
+
+nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #255c7b;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+nav ul li a {
+  color: #255c7b;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+/* Hero Section with Profile Image */
+.hero {
+background: #2a3f54;
+color: #d9e9f2;
+padding: 6em 2em;
+margin-top: 60px;
+display: flex;
+align-items: center;
+gap: 2em;
+}
+
+.hero h1 {
+font-size: 2.5em;
+margin-bottom: 0.5em;
+font-weight: 700;
+color: #00aaff;
+white-space: nowrap;
+overflow: hidden; /* Keep this to prevent text from flowing outside */
+border-right: 0.15em solid #00aaff; /* Cursor effect */
+width: 0;
+animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+from { width: 0; }
+to { width: 100%; }
+}
+
+/* Blinking cursor animation, stop after typing ends */
+@keyframes blink-caret {
+50% { border-color: transparent; }
+100% { border-color: transparent; }
+}
+
+/* Add animation to remove the typing bar after typing */
+.hero h1.typing-complete {
+border-right: none; /* Remove the typing cursor once typing completes */
+}
+/* Add mouse animation */
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #2a3f54;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse-wheel {
+  width: 6px;
+  height: 10px;
+  background-color: #2a3f54;
+  border-radius: 50px;
+  margin: 10px auto;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: #00aaff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  font-weight: 300;
+  max-width: 500px;
+}
+
+.hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00aaff;
+}
+
+
+/* Section Styling */
+.section {
+  padding: 4em 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #2a3f54;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #00aaff;
+  display: block;
+  margin: 0.5em auto;
+  border-radius: 2px;
+}
+
+/* About Section */
+#about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Projects */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.project {
+  background: #ffffff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+  font-size: 1.5em;
+  color: #2a3f54;
+  margin-bottom: 0.5em;
+}
+
+.project p {
+  color: #777;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 1em;
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #2a3f54;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #00aaff;
+}
+
+form button {
+  background: #2a3f54;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #00aaff;
+}
+/* Footer */
+footer {
+  background: #2a3f54;
+  color: #d9e9f2;
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  margin-top: 4em;
+}
+
+footer p { 
+  font-size: 1em; 
+}
+
+footer a { 
+  color: #0a86de; 
+  text-decoration: none; 
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.social-links a {
+  color: #2a3f54;
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #00aaff;
+}
+
+/* Social Bar Styling */
+.footer-bar {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  color: #2a3f54;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: right;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bar p {
+  margin-bottom: 1em;
+}
+/* Footer styling */
+footer {
+padding: 20px;
+background-color: #333;
+color: #fff;
+text-align: center;
+}
+
+.footer-bar {
+position: fixed;         /* Keeps the bar fixed on the right side */
+top: 50%;                /* Centers the bar vertically */
+right: 0;                /* Aligns to the right edge of the screen */
+transform: translateY(-50%); /* Adjusts for exact centering */
+padding: 10px;
+border-radius: 10px 0 0 10px;
+background-color: #2a3f54;  /* Blue background for the bar */
+z-index: 1000;
+}
+
+.social-links {
+display: flex;
+flex-direction: column; /* Stack icons vertically */
+gap: 15px;
+align-items: center;
+}
+
+.social-links a {
+color: white;         /* White color for icons */
+font-size: 20px;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.social-links a:hover {
+color: #2a3f54; /* Change icon color on hover to a lighter blue */
+}
+/* Hero Section - Animated Text */
+.hero p {
+font-size: 1.2em;
+font-weight: 300;
+max-width: 500px;
+margin-top: 1em;
+color: #d9e9f2;
+animation: slideIn 3s ease-out forwards;
+opacity: 0;
+}
+
+/* Sliding animation for the text */
+@keyframes slideIn {
+0% {
+  transform: translateY(30px);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+/* Counter Styling */
+.counter-display {
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+font-size: 2em;
+color: #333; /* Adjust color to your theme */
+font-weight: bold;
+background-color: #f0f0f0;
+padding: 10px 15px;
+border-radius: 10px;
+z-index: 1000;
+transition: opacity 0.5s ease-out;
+opacity: 1;
+}
+.portfolio-content {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.portfolio-content.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/*Skills section */
+#skills-box {
+    text-align: center;
+    margin: 50px 0;
+  }
+  #skills-box h2 {
+    color: #2a3f54;
+    font-size: 2em;
+  }
+  #skills-box p {
+    font-size: 1.2em;
+    color: #2a3f54;
+    margin-bottom: 20px;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Row Styling */
+  .skills-row {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  /* Skill Item */
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  .skill p {
+    font-size: 1em;
+    color: #2a3f54;
+  }
+  .skill:hover {
+    transform: scale(1.1);
+  }
+/* Styling for About Section next to Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-section {
+  max-width: 600px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  line-height: 1.6;
+}
+/* effect */
+.tab{
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 1;
+}
+#intro{
+  z-index: 2;
+}
+
+.tab.active{
+  --x: 50%;
+  --y: 50%;
+  clip-path: circle(
+      200% at var(--x) var(--y)
+  );
+  animation: showTab 1s ease-in-out 1;
+}
+@keyframes showTab{
+  from{
+      clip-path: circle(
+          0% at var(--x) var(--y)
+      );
+  }
+}
