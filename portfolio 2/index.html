@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio #09 | AsmrProg</title>
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <a href="#" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Logo.</a>
+
+        <div class="navbar__menu">
+            <a href="#hero">Home</a>
+            <a href="#showcase">Projects</a>
+            <a href="#skills" class="navbar__link">Skills</a>
+            <a href="#about" class="showcase__header">About</a>
+        </div>
+        <div class="navbar__actions">
+            <div class="navbar__location">
+                <h5>Tamilnadu,India</h5>
+                <p id="time"></p>
+        <script>
+            function updateTime() {
+                const now = new Date();
+                const options = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+                const timeString = now.toLocaleTimeString('en-US', options);
+                document.getElementById('time').textContent = timeString;
+            }
+        
+            // Update time immediately and every second
+            updateTime();
+            setInterval(updateTime, 1000);
+        </script>
+        
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero__content">
+            <img src="D:\Oreeyyy\IMG_20241130_151526_802.webp" alt="Profile Image" class="hero__image">
+            <h2>Hello! I'm Anuvendhan</h2>
+        </div>
+
+        <div class="hero__intro">
+            <h3>Ai Developer & Programmer</h3>
+            <p>Crafting minds for machines, weaving codes into consciousness—an AI developer breathing life into algorithms, one line at a time</p>
+            <div class="hero__actions">
+                <a href="https://github.com/Anuvendhan34/Object-Detection-YOLO-v3" target="_blank">
+                <button class="btn btn--secondary">Download CV</button></a>
+            </div>
+        </div>
+
+        <div class="hero__socials">
+            <a href="https://www.instagram.com" target="_blank"><i class="ri-instagram-line"></i></a>
+            <a href="https://github.com/Anuvendhan34" target="_blank"><i class="ri-github-line"></i></a>
+            <a href="https://x.com/AnuVendhan" target="_blank"><i class="ri-twitter-line"></i></a>
+            <a href="https://www.linkedin.com/in/anu-vendhan-a00466265/" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+        </div>        
+
+    </section>
+
+    <section class="skills">
+
+        <div class="skills__desc">
+            <h3>What my programming skills included?</h3>
+            <p>I have hands-on experience in a variety of programming languages and technologies, including C, Java, and Python,
+                 which have strengthened my problem-solving and algorithmic thinking. Additionally, I am skilled in HTML, CSS, and 
+                 JavaScript, enabling me tobuild responsive and dynamic web applications with a focus on user experience and modern design principles</p>
+        </div>
+
+        <div class="skills__stats">
+            <i class="devicon-c-plain"></i>
+            <div class="skill__info">
+                <i class="devicon-cplusplus-plain"></i>
+            </div>
+            <i class="devicon-python-plain"></i>
+            <div class="skill__info">
+                <i class="devicon-java-plain"></i>
+            </div>
+            <div class="skill__info">
+                <i class="devicon-html5-plain"></i>
+            </div>
+            <i class="devicon-css3-plain"></i>
+            <div class="skill__info">
+                <i class="devicon-javascript-plain"></i>
+            </div>
+            <i class="devicon-php-plain"></i>
+        </div>
+
+    </section>
+
+    <section class="showcase">
+
+        <div class="showcase__header">
+            <h3>Here's My Project:</h3>
+            <button class="btn">See My Work</button>
+        </div>
+
+        <div class="showcase_categories">
+            <section class="category">
+                <div class="category__header">
+                    <div class="category__title">
+                        <i class="ri-macbook-line"></i>
+                        <h4>Projects</h4>
+                    </div>
+                    <div class="category__desc">
+                        <p>Designing and developing dynamic, user-friendly web applications that showcase your creativity and technical skills. 
+                        The application provides seamless user experiences, integrates interactive elements, and supports real-time data handling, 
+                        ensuring a smooth and engaging user interface.</p>
+                        <a href="#"><i class="ri-share-circle-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="category__projects">
+                    <div class="project-card">
+                        <img src="C:\Users\Lenovo\Downloads\object detection.jpg" alt="Portfolio 1" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>Object detection using YOLO v3</h5>
+                            <!-- Wrap the button inside the anchor tag properly -->
+                            <a href="https://github.com/Anuvendhan34/Object-Detection-YOLO-v3" target="_blank">
+                                <button class="btn">View on GitHub</button>
+                            </a>
+                        </div>
+                        <p class="project-card__desc">
+                            This project demonstrates the implementation of YOLO v3 (You Only Look Once), a state-of-the-art real-time object detection system. YOLO v3 is capable 
+                            of detecting and classifying multiple objects in images and videos with high accuracy and speed. It works by dividing an image into grids and 
+                            predicting bounding boxes for detected objects along with class labels, all in a single forward pass.
+                        </p>
+
+                    </div>
+                    <div class="project-card">
+                        <img src="C:\Users\Lenovo\Downloads\Encryption.jpg" alt="Portfolio 2" class="project-card__image">
+                        <div class="project-card__info">
+                            <h5>ImageHide---Visual-Steganography-Application</h5>
+                            <a href="https://github.com/Anuvendhan34/ImageHide---Visual-Steganography-Application" target="_blank">
+                                <button class="btn">View on GitHub</button>
+                            </a>
+                        </div>
+                        <p class="project-card__desc">ImageHide is a visual steganography application that allows users to hide secret messages or data within an image file.
+                             Using advanced algorithms, the application embeds text or files into the least significant bits of an image, making it invisible to the naked eye 
+                             while maintaining the image’s visual appearance. The hidden data can be retrieved only by someone with the correct decryption key or method, making 
+                             it a secure way to transmit sensitive information covertly.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="C:\Users\Lenovo\Downloads\tldraw.png" alt="Portfolio 3" class="project-card__image">
+                        <div class="project-card__info">
+                        <h5>VoiceBoard---Interactive-Whiteboard-with-Text-to-Speech</h5>
+                        <a href="https://github.com/Anuvendhan34/VoiceBoard---Interactive-Whiteboard-with-Text-to-Speech" target="_blank">
+                            <button class="btn">View on GitHub</button>
+                        </a>
+                        </div>
+                        <p class="project-card__desc">VoiceBoard is an interactive whiteboard application that integrates text-to-speech functionality, allowing users to collaborate and communicate in real-time.
+                             It enables users to draw, write, and annotate on a shared digital canvas while the content is read aloud through text-to-speech.VoiceBoard is perfect for remote collaboration,
+                              educational purposes, and meetings, providing both visual and auditory interaction.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="C:\Users\Lenovo\Downloads\tldraw.png" alt="Portfolio 3" class="project-card__image">
+                        <div class="project-card__info">
+                        <h5>VoiceBoard---Interactive-Whiteboard-with-Text-to-Speech</h5>
+                        <a href="https://github.com/Anuvendhan34/VoiceBoard---Interactive-Whiteboard-with-Text-to-Speech" target="_blank">
+                            <button class="btn">View on GitHub</button>
+                        </a>
+                        </div>
+                        <p class="project-card__desc">VoiceBoard is an interactive whiteboard application that integrates text-to-speech functionality, allowing users to collaborate and communicate in real-time.
+                             It enables users to draw, write, and annotate on a shared digital canvas while the content is read aloud through text-to-speech.VoiceBoard is perfect for remote collaboration,
+                              educational purposes, and meetings, providing both visual and auditory interaction.</p>
+                    </div>
+                </div>
+
+            </section>
+
+    <section class="career">
+        <div class="career__jobs">
+            <h3>Intern Experience</h3>
+            <div class="job">
+                <i class="ri-robot-line"></i>
+                <div class="job__info">
+                    <h5>Etherinfo <span>TechCorp</span></h5>
+                    <p>Exploring the depths of neural networks, turning data into intelligence—pushing boundaries as a Deep Learning intern.</p>
+                </div>
+            </div>
+            <div class="job">
+                <i class="ri-paint-brush-line"></i>
+                <div class="job__info">
+                    <h5>UI/UX Developer at <span>StartupX</span></h5>
+                    <p>March 2016 – January 2018</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="career__awards">
+            <h3>Coding Arenas</h3>
+            <div class="award">
+                <div>
+                    <i class="ri-code-fill"></i>
+                    <div class="award__info">
+                        <h5>Codechef<span>-anuvendhan</span></h5>
+                    </div>
+                </div>
+                <a href="https://www.codechef.com/users/anuvendhan"><i class="ri-external-link-line"></i></a>
+            </div>
+            <div class="award">
+                <div>
+                    <i class="ri-code-line"></i>
+                    <div class="award__info">
+                        <h5>Leetcode<span>~Anuvendhan</span></h5>
+                    </div>
+                </div>
+                <a href="https://leetcode.com/u/pzfa3ZWE0n/"><i class="ri-external-link-line"></i></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <h2>See you again!</h2>
+        <button class="btn">Send Mail</button>
+        <p>Mail: <span>anuvendhan73@gmail.com</span></p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="#hero">Home</a>
+            <a href="#showcase">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
